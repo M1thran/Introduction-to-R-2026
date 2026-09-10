@@ -4,9 +4,7 @@ subtitle: 'BIOL 6994/BIOL 6997'
 author: "Estefan A. Rivera López"
 date: "`r format(Sys.time(), '%Y-%b-%d, %I:%M %p')`"
 output: 
-  prettydoc::html_pretty:
-    theme: cayman
-    highlight: github
+  rmdformats::readthedown
 ---
 
 ```{r}
@@ -31,3 +29,8 @@ library(ggplot2)
 | --------- | --------- | --------- |
 | TRUE | Show code, show results | Shows warning in final output | Shows code and results |
 | FALSE | Hide code, show results | Hides warning in final output | Hides code and hides results |
+
+<br>
+<br>
+
+# Assignments
