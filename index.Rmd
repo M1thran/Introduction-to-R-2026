@@ -1,0 +1,33 @@
+---
+title: "Intro to R"
+subtitle: 'BIOL 6994/BIOL 6997'
+author: "Estefan A. Rivera López"
+date: "`r format(Sys.time(), '%Y-%b-%d, %I:%M %p')`"
+output: 
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+```{r}
+```
+
+<p align="center">
+  <img src="9005bbc2-12f4-4354-9aee-78e0af44f40c.jpg" width="50%">
+</p>
+
+# About me
+<br>
+I am a first year **Masters of Engineering in Bioengineering** student, currently developing a project in a hybrid **Brain-Computer Interface** (hBCI) in conjunction with electrooculography (EOG) for assisted rehabilitation of quadriparetic patients. I've prior exposure to R and R Studio, yet have not delved into it as much as this class will.
+
+# Chunks 
+```{r echo = F, warning = F, message = F}
+14 + 13
+library(ggplot2)
+```
+# Tables
+
+| T/F | Echo  | Warning  | Include |
+| --------- | --------- | --------- |
+| TRUE | Show code, show results | Shows warning in final output | Shows code and results |
+| FALSE | Hide code, show results | Hides warning in final output | Hides code and hides results |
