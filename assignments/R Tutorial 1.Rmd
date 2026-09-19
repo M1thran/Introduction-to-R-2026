@@ -1,0 +1,65 @@
+---
+title: "Assignment 1"
+author: "Estefan A. Rivera López"
+date: "`r format(Sys.time(), '%Y-%b-%d, %I:%M %p')`"
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+# R Tutorial
+
+Q1: Create an object called height with the value 175. Print it
+```{r}
+Height <- 175
+print(Height)
+```
+Q2: Calculate the result of 25 * 4 - 10. 
+```{r}
+25 * 4 - 10
+```
+Q3: Use the function sqrt() to calculate the square root of 81. 
+```{r}
+sqrt(81)
+```
+Q4: Assign the phrase "R is fun!" to an object called message. Print it. 
+```{r}
+message <- "R is fun"
+print(message)
+```
+Q5: Create two objects a <- 10 and b <- 5. Calculate their sum and store it in c. 
+```{r}
+a <- 10
+b <- 5
+c <- a + b
+print(c)
+```
+Q6: Test whether 15 is greater than 20. 
+```{r}
+15 > 20 
+```
+Q7: Check the class of the object "Hello World". 
+```{r}
+a <- "Hello World"
+class(a)
+```
+Q8: Run the following code chunk: 
+Observe the warnings that appear 
+Modify the chunk to suppress warnings without changing the code itself. 
+```{r, warning=FALSE}
+log(-1)
+```
+Q9:Run the following code chunk:
+Observe the messages that appear. 
+Modify the chunk options to suppress messages without changing the code itself.
+```{r message=FALSE}
+library(dplyr)
+```
+Q10: Create a numeric vector called grades containing the values 80, 90, 75, 95, and 85. Then, use the mean() function to calculate the average grade and store the result in an object called average. Print the result.
+```{r}
+Grades <- c(80, 90, 75, 95, 85)
+Average <- mean(Grades)
+print(Average)
+```
+

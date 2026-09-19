@@ -1,0 +1,25 @@
+/* Active sidebar tab and hover states */
+#main .nav-pills > li.active > a, 
+#main .nav-pills > li.active > a:hover, 
+#main .nav-pills > li.active > a:focus { 
+    background-color: #998ec3; 
+} 
+
+#main .nav-pills > li > a:hover { 
+    background-color: #998ec3; 
+} 
+
+/* Headers and text legends */
+h1, h2, h3, h4, h5, h6, legend { 
+    color: #998ec3; 
+} 
+
+/* Top navigation icons */
+#nav-top span.glyphicon { 
+    color: #998ec3; 
+} 
+
+/* Table of Contents header background */
+#table-of-contents header { 
+    background-color: #998ec3; 
+}
