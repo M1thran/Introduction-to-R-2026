@@ -13,7 +13,7 @@
 <meta name="author" content="Estefan A. Rivera López" />
 
 
-<title>Assignment 1</title>
+<title>Assignment 2</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -148,62 +148,167 @@ code span.ot { color: #007020; }
 
 
 <section class="page-header">
-<h1 class="title toc-ignore project-name">Assignment 1</h1>
+<h1 class="title toc-ignore project-name">Assignment 2</h1>
 <h4 class="author project-author">Estefan A. Rivera López</h4>
-<h4 class="date project-date">2026-Sep-24, 11:53 PM</h4>
+<h4 class="date project-date">2026-Sep-24, 11:54 PM</h4>
 </section>
 
 
 
 <section class="main-content">
-<div id="r-tutorial" class="section level1">
-<h1>R Tutorial</h1>
-<p>Q1: Create an object called height with the value 175. Print it</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>Height <span class="ot">&lt;-</span> <span class="dv">175</span></span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">print</span>(Height)</span></code></pre></div>
-<pre><code>## [1] 175</code></pre>
-<p>Q2: Calculate the result of 25 * 4 - 10.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="dv">25</span> <span class="sc">*</span> <span class="dv">4</span> <span class="sc">-</span> <span class="dv">10</span></span></code></pre></div>
-<pre><code>## [1] 90</code></pre>
-<p>Q3: Use the function sqrt() to calculate the square root of 81.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="dv">81</span>)</span></code></pre></div>
-<pre><code>## [1] 9</code></pre>
-<p>Q4: Assign the phrase “R is fun!” to an object called message. Print
-it.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>message <span class="ot">&lt;-</span> <span class="st">&quot;R is fun&quot;</span></span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="fu">print</span>(message)</span></code></pre></div>
-<pre><code>## [1] &quot;R is fun&quot;</code></pre>
-<p>Q5: Create two objects a &lt;- 10 and b &lt;- 5. Calculate their sum
-and store it in c. </p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">5</span></span>
-<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>c <span class="ot">&lt;-</span> a <span class="sc">+</span> b</span>
-<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="fu">print</span>(c)</span></code></pre></div>
-<pre><code>## [1] 15</code></pre>
-<p>Q6: Test whether 15 is greater than 20.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="dv">15</span> <span class="sc">&gt;</span> <span class="dv">20</span> </span></code></pre></div>
-<pre><code>## [1] FALSE</code></pre>
-<p>Q7: Check the class of the object “Hello World”.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="st">&quot;Hello World&quot;</span></span>
-<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="fu">class</span>(a)</span></code></pre></div>
-<pre><code>## [1] &quot;character&quot;</code></pre>
-<p>Q8: Run the following code chunk: Observe the warnings that appear
-Modify the chunk to suppress warnings without changing the code
-itself.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">log</span>(<span class="sc">-</span><span class="dv">1</span>)</span></code></pre></div>
-<pre><code>## [1] NaN</code></pre>
-<p>Q9:Run the following code chunk: Observe the messages that appear.
-Modify the chunk options to suppress messages without changing the code
-itself.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
-<p>Q10: Create a numeric vector called grades containing the values 80,
-90, 75, 95, and 85. Then, use the mean() function to calculate the
-average grade and store the result in an object called average. Print
-the result.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a>Grades <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">80</span>, <span class="dv">90</span>, <span class="dv">75</span>, <span class="dv">95</span>, <span class="dv">85</span>)</span>
-<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a>Average <span class="ot">&lt;-</span> <span class="fu">mean</span>(Grades)</span>
-<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a><span class="fu">print</span>(Average)</span></code></pre></div>
-<pre><code>## [1] 85</code></pre>
+<div id="r-tutorial-2" class="section level1">
+<h1>R Tutorial 2</h1>
+<p>Q1: What class is the gapminder dataset?</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">class</span>(gapminder)</span></code></pre></div>
+<pre><code>## [1] &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;</code></pre>
+<p>Q2: Filter a section of gapminder with a life expectancy smaller than
+29.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>gapminder <span class="sc">|&gt;</span> </span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>  <span class="fu">filter</span>(lifeExp <span class="sc">&lt;</span> <span class="dv">29</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">6</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 2 × 6
+##   country     continent  year lifeExp     pop gdpPercap
+##   &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;   &lt;int&gt;     &lt;dbl&gt;
+## 1 Afghanistan Asia       1952    28.8 8425333      779.
+## 2 Rwanda      Africa     1992    23.6 7290203      737.</code></pre>
+<p>Q3: Filter the dataset for the country Rwanda and for years greater
+than 1979.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>gapminder <span class="sc">|&gt;</span> </span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  <span class="fu">filter</span>(country <span class="sc">==</span> <span class="st">&quot;Rwanda&quot;</span>, year <span class="sc">&gt;</span> <span class="dv">1979</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 6
+##   country continent  year lifeExp     pop gdpPercap
+##   &lt;fct&gt;   &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;   &lt;int&gt;     &lt;dbl&gt;
+## 1 Rwanda  Africa     1982    46.2 5507565      882.
+## 2 Rwanda  Africa     1987    44.0 6349365      848.
+## 3 Rwanda  Africa     1992    23.6 7290203      737.
+## 4 Rwanda  Africa     1997    36.1 7212583      590.
+## 5 Rwanda  Africa     2002    43.4 7852401      786.
+## 6 Rwanda  Africa     2007    46.2 8860588      863.</code></pre>
+<p>Q4: Create a new dataset from gapminder excluding the column
+gdpPercap.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>gapminder <span class="sc">|&gt;</span> </span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">!</span>gdpPercap)</span></code></pre></div>
+<pre><code>## # A tibble: 1,704 × 5
+##    country     continent  year lifeExp      pop
+##    &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;
+##  1 Afghanistan Asia       1952    28.8  8425333
+##  2 Afghanistan Asia       1957    30.3  9240934
+##  3 Afghanistan Asia       1962    32.0 10267083
+##  4 Afghanistan Asia       1967    34.0 11537966
+##  5 Afghanistan Asia       1972    36.1 13079460
+##  6 Afghanistan Asia       1977    38.4 14880372
+##  7 Afghanistan Asia       1982    39.9 12881816
+##  8 Afghanistan Asia       1987    40.8 13867957
+##  9 Afghanistan Asia       1992    41.7 16317921
+## 10 Afghanistan Asia       1997    41.8 22227415
+## # ℹ 1,694 more rows</code></pre>
+<p>Q5: Arrange the dataset in ascending order of lifeExp.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>gapminder <span class="sc">|&gt;</span> </span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>  <span class="fu">arrange</span>(lifeExp)</span></code></pre></div>
+<pre><code>## # A tibble: 1,704 × 6
+##    country      continent  year lifeExp     pop gdpPercap
+##    &lt;fct&gt;        &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;   &lt;int&gt;     &lt;dbl&gt;
+##  1 Rwanda       Africa     1992    23.6 7290203      737.
+##  2 Afghanistan  Asia       1952    28.8 8425333      779.
+##  3 Gambia       Africa     1952    30    284320      485.
+##  4 Angola       Africa     1952    30.0 4232095     3521.
+##  5 Sierra Leone Africa     1952    30.3 2143249      880.
+##  6 Afghanistan  Asia       1957    30.3 9240934      821.
+##  7 Cambodia     Asia       1977    31.2 6978607      525.
+##  8 Mozambique   Africa     1952    31.3 6446316      469.
+##  9 Sierra Leone Africa     1957    31.6 2295678     1004.
+## 10 Burkina Faso Africa     1952    32.0 4469979      543.
+## # ℹ 1,694 more rows</code></pre>
+<p>Q6: Arrange the dataset in descending order of lifeExp.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>gapminder <span class="sc">|&gt;</span> </span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(lifeExp))</span></code></pre></div>
+<pre><code>## # A tibble: 1,704 × 6
+##    country          continent  year lifeExp       pop gdpPercap
+##    &lt;fct&gt;            &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;
+##  1 Japan            Asia       2007    82.6 127467972    31656.
+##  2 Hong Kong, China Asia       2007    82.2   6980412    39725.
+##  3 Japan            Asia       2002    82   127065841    28605.
+##  4 Iceland          Europe     2007    81.8    301931    36181.
+##  5 Switzerland      Europe     2007    81.7   7554661    37506.
+##  6 Hong Kong, China Asia       2002    81.5   6762476    30209.
+##  7 Australia        Oceania    2007    81.2  20434176    34435.
+##  8 Spain            Europe     2007    80.9  40448191    28821.
+##  9 Sweden           Europe     2007    80.9   9031088    33860.
+## 10 Israel           Asia       2007    80.7   6426679    25523.
+## # ℹ 1,694 more rows</code></pre>
+<p>Q7: Create a new dataset with only the columns year and lifeExp.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>gapminder <span class="sc">|&gt;</span> </span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>  <span class="fu">select</span>(year, lifeExp)</span></code></pre></div>
+<pre><code>## # A tibble: 1,704 × 2
+##     year lifeExp
+##    &lt;int&gt;   &lt;dbl&gt;
+##  1  1952    28.8
+##  2  1957    30.3
+##  3  1962    32.0
+##  4  1967    34.0
+##  5  1972    36.1
+##  6  1977    38.4
+##  7  1982    39.9
+##  8  1987    40.8
+##  9  1992    41.7
+## 10  1997    41.8
+## # ℹ 1,694 more rows</code></pre>
+<p>Q8: Filter the dataset for the country Cambodia and show only the
+columns year and lifeExp.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a>gapminder <span class="sc">|&gt;</span></span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>  <span class="fu">filter</span>(country <span class="sc">==</span> <span class="st">&quot;Cambodia&quot;</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a>  <span class="fu">select</span>(year, lifeExp)</span></code></pre></div>
+<pre><code>## # A tibble: 12 × 2
+##     year lifeExp
+##    &lt;int&gt;   &lt;dbl&gt;
+##  1  1952    39.4
+##  2  1957    41.4
+##  3  1962    43.4
+##  4  1967    45.4
+##  5  1972    40.3
+##  6  1977    31.2
+##  7  1982    51.0
+##  8  1987    53.9
+##  9  1992    55.8
+## 10  1997    56.5
+## 11  2002    56.8
+## 12  2007    59.7</code></pre>
+<p>Q9: Select only the countries in Africa.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a>gapminder <span class="sc">|&gt;</span> </span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a>  <span class="fu">filter</span>(continent <span class="sc">==</span> <span class="st">&quot;Africa&quot;</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 624 × 6
+##    country continent  year lifeExp      pop gdpPercap
+##    &lt;fct&gt;   &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+##  1 Algeria Africa     1952    43.1  9279525     2449.
+##  2 Algeria Africa     1957    45.7 10270856     3014.
+##  3 Algeria Africa     1962    48.3 11000948     2551.
+##  4 Algeria Africa     1967    51.4 12760499     3247.
+##  5 Algeria Africa     1972    54.5 14760787     4183.
+##  6 Algeria Africa     1977    58.0 17152804     4910.
+##  7 Algeria Africa     1982    61.4 20033753     5745.
+##  8 Algeria Africa     1987    65.8 23254956     5681.
+##  9 Algeria Africa     1992    67.7 26298373     5023.
+## 10 Algeria Africa     1997    69.2 29072015     4797.
+## # ℹ 614 more rows</code></pre>
+<p>Q10: Create a new column called lifeExp_months that shows life
+expectancy in months.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a>gapminder <span class="sc">|&gt;</span> </span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">lifeExp_months =</span> lifeExp <span class="sc">*</span> <span class="dv">12</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a>  <span class="fu">select</span> (lifeExp_months, lifeExp, <span class="fu">everything</span>())</span></code></pre></div>
+<pre><code>## # A tibble: 1,704 × 7
+##    lifeExp_months lifeExp country     continent  year      pop gdpPercap
+##             &lt;dbl&gt;   &lt;dbl&gt; &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;    &lt;int&gt;     &lt;dbl&gt;
+##  1           346.    28.8 Afghanistan Asia       1952  8425333      779.
+##  2           364.    30.3 Afghanistan Asia       1957  9240934      821.
+##  3           384.    32.0 Afghanistan Asia       1962 10267083      853.
+##  4           408.    34.0 Afghanistan Asia       1967 11537966      836.
+##  5           433.    36.1 Afghanistan Asia       1972 13079460      740.
+##  6           461.    38.4 Afghanistan Asia       1977 14880372      786.
+##  7           478.    39.9 Afghanistan Asia       1982 12881816      978.
+##  8           490.    40.8 Afghanistan Asia       1987 13867957      852.
+##  9           500.    41.7 Afghanistan Asia       1992 16317921      649.
+## 10           501.    41.8 Afghanistan Asia       1997 22227415      635.
+## # ℹ 1,694 more rows</code></pre>
 </div>
 </section>
 

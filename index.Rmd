@@ -26,4 +26,4 @@ output:
 
 # Assignments
 ## [Assignment 1](assignments/R-Tutorial-1.html)
-
+## [Assignment 2](assignments/R-Tutorial-2.html)
