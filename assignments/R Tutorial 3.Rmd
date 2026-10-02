@@ -1,0 +1,51 @@
+---
+title: "Assignment 3"
+author: "Estefan A. Rivera López"
+date: "`r format(Sys.time(), '%Y-%b-%d, %I:%M %p')`"
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+# R Tutorial 3
+
+```{r}
+library(ggplot2)
+data("trees")
+head(trees)
+```
+
+Q1. Create a histogram showing the distribution of Girth.
+```{r, warning=FALSE}
+ggplot(trees, aes(Girth)) + 
+  geom_histogram(bins = 30, fill = "skyblue", color = "white")
+```
+
+Q2. Create a histogram showing the distribution of Volume.
+```{r, warning=FALSE}
+ggplot(trees, aes(Volume)) + 
+  geom_histogram(bins = 30, fill = "forestgreen", color = "white")
+```
+
+Q3. Create a scatterplot showing the relationship between Girth and Volume.
+```{r}
+ggplot(trees, aes(Girth, Volume)) + 
+  geom_point(color = "blue") +
+  labs(title = "Girth vs Volume",
+       x = "Girth",
+       y = "volume")
+```
+
+Q4. Use the Shapiro–Wilk test to assess whether Volume is normally distributed. Report the p-value and state whether the data are normally distributed.
+```{r}
+shapiro.test(trees$Volume)
+```
+The Volume data is not distributed normally, as the p-value = 0.03 and is below 0.05.
+
+Q5. Repeat the Shapiro–Wilk test for Girth. Report the p-value and state whether Girth is normally distributed.
+```{r}
+shapiro.test(trees$Girth)
+```
+
+The Girth data is normally distributed, as its p-value = 0.08, well over the 0.05 threshold.
