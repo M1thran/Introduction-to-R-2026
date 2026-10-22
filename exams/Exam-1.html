@@ -150,7 +150,7 @@ code span.ot { color: #007020; }
 <section class="page-header">
 <h1 class="title toc-ignore project-name">Exam 1</h1>
 <h4 class="author project-author">Estefan A. Rivera López</h4>
-<h4 class="date project-date">2026-Oct-22, 03:34 PM</h4>
+<h4 class="date project-date">2026-Oct-22, 04:03 PM</h4>
 </section>
 
 
@@ -276,6 +276,35 @@ descending.</h2>
 ## # ℹ 7,396 more rows
 ## # ℹ 2 more variables: tropicalstorm_force_diameter &lt;int&gt;,
 ## #   hurricane_force_diameter &lt;int&gt;</code></pre>
+</div>
+</div>
+<div id="a-comparison-of-site-preferences-of-two-species-of-lizards" class="section level1">
+<h1>A Comparison of Site Preferences of Two Species of Lizards</h1>
+<div id="q5-determine-which-site-and-diameter-combination-has-the-highest-total-grahami." class="section level2">
+<h2>Q5: Determine which Site and Diameter combination has the highest
+total grahami.</h2>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>lizards <span class="sc">|&gt;</span> </span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>  <span class="fu">group_by</span>(Site, Diameter) <span class="sc">|&gt;</span> </span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">highest_total_grahami =</span> <span class="fu">sum</span>(grahami)) <span class="sc">|&gt;</span> </span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(highest_total_grahami))</span></code></pre></div>
+<pre><code>## `summarise()` has regrouped the output.
+## ℹ Summaries were computed grouped by Site and Diameter.
+## ℹ Output is grouped by Site.
+## ℹ Use `summarise(.groups = &quot;drop_last&quot;)` to silence this message.
+## ℹ Use `summarise(.by = c(Site, Diameter))` for per-operation grouping
+##   (`?dplyr::dplyr_by`) instead.</code></pre>
+<pre><code>## # A tibble: 4 × 3
+## # Groups:   Site [2]
+##   Site  Diameter highest_total_grahami
+##   &lt;fct&gt; &lt;fct&gt;                    &lt;dbl&gt;
+## 1 Shade D &lt;= 2                     220
+## 2 Shade D &gt; 2                      122
+## 3 Sun   D &lt;= 2                      65
+## 4 Sun   D &gt; 2                       24</code></pre>
+</div>
+<div id="q6-create-a-boxplot-showing-the-distribution-of-opalinus-counts-under-different-light-conditions-sun-vs.-shade-using-ggplot2." class="section level2">
+<h2>Q6: Create a boxplot showing the distribution of opalinus counts
+under different light conditions (Sun vs. Shade) using ggplot2.</h2>
 </div>
 </div>
 </section>

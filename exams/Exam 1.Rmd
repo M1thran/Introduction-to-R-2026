@@ -60,4 +60,16 @@ storms |>
   select(wind, everything())
 ```
 
+# A Comparison of Site Preferences of Two Species of Lizards
+
+## Q5: Determine which Site and Diameter combination has the highest total grahami.
+
+```{r}
+lizards |> 
+  group_by(Site, Diameter) |> 
+  summarise(highest_total_grahami = sum(grahami)) |> 
+  arrange(desc(highest_total_grahami))
+```
+
+## Q6: Create a boxplot showing the distribution of opalinus counts under different light conditions (Sun vs. Shade) using ggplot2.
 
