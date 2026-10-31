@@ -28,7 +28,7 @@ output:
 ## [Assignment 1](assignments/R-Tutorial-1.html)
 ## [Assignment 2](assignments/R-Tutorial-2.html)
 ## [Assignment 3](assignments/R-Tutorial-3.html)
-
+## [Assignment 4](assignments/R-Tutorial-4.html)
 <br>
 
 # Exams

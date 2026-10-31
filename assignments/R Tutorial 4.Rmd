@@ -1,0 +1,79 @@
+---
+title: "Assignment 4"
+author: "Estefan A. Rivera López"
+date: "`r format(Sys.time(), '%Y-%b-%d, %I:%M %p')`"
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+# R Tutorial 4
+
+## Context: 
+
+
+We have a data set from a former student’s biology thesis. butterflies_pesticides.xlsx reports the mean wing length for 80 butterflies (40 of which were treated with pesticides during the larval stage (labeled Group2) and 40 that were not (control group labeled 1))
+
+Our task will be to examine how pesticides impact butterfly development. Let’s start with the Butterfly Pesticides Data.
+
+Assume that we want to test to see if there is a difference between butterfly wing length for those treated with pesticides (group 2) and those not treated with pesticides (group 1).
+
+## Analysis
+
+```{r, message = FALSE}
+# install.packages("tidyverse")
+# install.packages("lessR")
+# install.packages("readxl")
+# install.packages("BSDA")
+
+library(tidyverse)
+library(lessR)
+library(readxl)
+library(BSDA)
+```
+
+Q1. Normality test
+```{r}
+butterflies_pesticides <- read_excel("butterflies_pesticides.xlsx")
+head(butterflies_pesticides)
+
+shapiro.test(
+  butterflies_pesticides$`Wing Length`[
+    butterflies_pesticides$Group == "group1"
+  ]
+)
+
+shapiro.test(
+  butterflies_pesticides$`Wing Length`[
+    butterflies_pesticides$Group == "group2"
+  ]
+)
+```
+Q2. Equality of variances test 
+```{r}
+var.test(`Wing Length` ~ Group,
+         data = butterflies_pesticides)
+```
+Q3. Statistical test
+```{r}
+t.test(`Wing Length` ~ Group,
+         data = butterflies_pesticides)
+```
+Q4. ggplot
+```{r}
+ggplot(butterflies_pesticides,
+       aes(x = Group,
+           y = `Wing Length`,
+           fill = Group)) +
+  geom_boxplot() +
+  labs(
+    title = "Butterfly Wing Length by Treatment Group",
+    x = "Group",
+    y = "Wing Length"
+  ) +
+  theme_minimal()
+```
+Q5: Summary paragraph - Write one concise paragraph summarizing your research objective, methods, statistical results, and interpretation of the findings, including whether the observed difference is statistically significant and biologically meaningful.
+
+- Our study investigated whether pesticide exposure to butterflies during their larval stage would affect their wing length. We used an independent Welch two sample t-test to compare wing length between the group 1 (control) and group 2 (pesticide-treated). Our analysis indicated that there is a significant difference in wing length between the groups (a total of 80 samples), t(66.03) = 3.98, p = 1.7 x 10^-4. Butterflies in the control group had a greater mean wing length of 632.18, while the pesticide group showed a mean of 593.49. This suggests that pesticide exposure does have a negative effect on butterfly wing development, the difference does mark a significant biological shift for the butterflies.
